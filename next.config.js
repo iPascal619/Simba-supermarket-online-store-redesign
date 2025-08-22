@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {},
+  turbopack: {
+    root: process.cwd(),
   },
   images: {
     remotePatterns: [

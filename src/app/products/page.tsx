@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import ProductsPage from './components/ProductsPage'
+import ProductsPageNew from './components/ProductsPageNew'
 
 export const metadata: Metadata = {
   title: 'All Products - Simba Supermarket',
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function Products() {
-  return <ProductsPage />
+  return <ProductsPageNew />
 }

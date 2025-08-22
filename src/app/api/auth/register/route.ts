@@ -31,6 +31,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Check if prisma client is available
+    if (!prisma) {
+      console.error('Prisma client is not available')
+      return NextResponse.json(
+        { message: 'Database connection error' },
+        { status: 500 }
+      )
+    }
+
     // Check if user already exists
     const existingUser = await prisma.user.findUnique({
       where: { email }
@@ -71,10 +80,30 @@ export async function POST(request: NextRequest) {
       { status: 201 }
     )
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Registration error:', error)
+    
+    // Handle specific Prisma errors
+    if (error.code === 'P2002') {
+      return NextResponse.json(
+        { message: 'An account with this email already exists' },
+        { status: 400 }
+      )
+    }
+    
+    // Handle database connection errors
+    if (error.code === 'P1001') {
+      return NextResponse.json(
+        { message: 'Unable to connect to database. Please try again later.' },
+        { status: 503 }
+      )
+    }
+    
     return NextResponse.json(
-      { message: 'Internal server error' },
+      { 
+        message: 'Internal server error. Please try again later.',
+        error: process.env.NODE_ENV === 'development' ? error.message : undefined 
+      },
       { status: 500 }
     )
   }

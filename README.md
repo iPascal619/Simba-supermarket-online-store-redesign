@@ -86,8 +86,8 @@ TypeScript              # Static type checking
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/simba-supermarket-redesign.git
-   cd simba-supermarket-redesign
+   git clone https://github.com/iPascal619/Simba-supermarket-online-store-redesign.git
+   cd SimbaSimba-supermarket-online-store-redesign
    ```
 
 2. **Install dependencies**
@@ -262,28 +262,6 @@ POST   /api/wishlist       # Add item to wishlist
 DELETE /api/wishlist       # Remove item from wishlist
 ```
 
-## 🚀 Deployment
-
-### **Vercel (Recommended)**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/simba-supermarket-redesign)
-
-1. **Connect GitHub repository** to Vercel
-2. **Configure environment variables** in Vercel dashboard
-3. **Deploy** - Automatic builds on every push to main branch
-
-### **Environment Variables for Production**
-```env
-# Database (PostgreSQL for production)
-DATABASE_URL="postgresql://username:password@host:port/database"
-
-# NextAuth
-NEXTAUTH_URL="https://your-domain.com"
-NEXTAUTH_SECRET="your-production-secret"
-
-# OAuth Providers
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-```
 
 ## 📈 Performance Metrics
 
@@ -295,7 +273,7 @@ GOOGLE_CLIENT_SECRET="your-google-client-secret"
 
 ## 🤝 Contributing
 
-We welcome contributions to improve the Simba Supermarket platform! Please follow these guidelines:
+Abeg, contribute to improve the Simba Supermarket platform! Please follow these guidelines if you are interested in contributing:
 
 ### **Development Workflow**
 1. **Fork** the repository
@@ -311,19 +289,10 @@ We welcome contributions to improve the Simba Supermarket platform! Please follo
 - Add tests for new features
 - Update documentation as needed
 
-## 📞 Support & Contact
-
-For technical support, feature requests, or business inquiries:
-
-- **🌐 Website**: [simbasupermarket.rw](https://simbasupermarket.rw)
-- **📧 Email**: tech@simbasupermarket.rw
-- **📱 Phone**: +250 788 123 456
-- **📍 Address**: KG 123 St, Kigali, Rwanda
-- **💬 Issues**: [GitHub Issues](https://github.com/your-username/simba-supermarket-redesign/issues)
 
 ## 📄 License
 
-This project is proprietary software owned by **Simba Supermarket**. All rights reserved.
+This project is proprietary software owned by **Chukwuma Pascal Onuoha**. All rights reserved. (Unless Simba Supermarket sees this and wants it , haha)
 
 ---
 

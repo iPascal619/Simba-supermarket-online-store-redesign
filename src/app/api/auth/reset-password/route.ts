@@ -21,14 +21,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // For this demo, we'll simulate token validation
-    // In a real app, you'd store the token in the database with expiry
+    // This is just a demonstration, token validation will be simulated 
+    // In a real app, abeg store the token in the database with expiry
     // and validate it here
     
-    // For now, we'll decode the token to get the email
-    // In production, you'd have a proper token validation system
     try {
-      // Simple base64 decode (in production, use proper JWT or database lookup)
+      // Simple base64 decode 
       const decodedToken = Buffer.from(token, 'hex').toString('utf-8')
       const tokenData = JSON.parse(decodedToken)
       
@@ -59,8 +57,7 @@ export async function POST(request: NextRequest) {
         where: { id: user.id },
         data: { 
           password: hashedPassword,
-          // In a real app, you might want to invalidate all sessions
-          // and require re-authentication
+          
         }
       })
 

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 
-// Simple in-memory cart storage for demo (in production, use database or Redis)
+// Simple in-memory cart storage for demo , eventually i will use Redis
 const carts: { [userId: string]: any[] } = {}
 
 // GET /api/cart - Get user's cart

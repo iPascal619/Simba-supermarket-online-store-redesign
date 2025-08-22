@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
       where: { email }
     })
 
-    // Always return success for security (don't reveal if email exists)
+    // Always return success for security 
     if (!user) {
       return NextResponse.json(
         { message: 'If an account with this email exists, you will receive reset instructions.' },
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     }
     const resetToken = Buffer.from(JSON.stringify(tokenData)).toString('hex')
 
-    // Create email transporter (you'll need to configure this with your email service)
+    // Create email transporter 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || '587'),
@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
       `,
     }
 
-    // For development, we'll just log the reset URL instead of sending email
+    // For development purposes only please
     if (process.env.NODE_ENV === 'development') {
       console.log('Password reset URL:', resetUrl)
     } else {

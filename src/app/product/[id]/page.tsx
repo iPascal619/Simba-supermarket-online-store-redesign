@@ -4,9 +4,9 @@ import ProductDetailPage from '../components/ProductDetailPage'
 import { products } from '../../../data/products'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

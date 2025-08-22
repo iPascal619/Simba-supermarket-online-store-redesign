@@ -4,13 +4,14 @@ import CategoryPage from '../components/CategoryPage'
 import { categories } from '../../../data/products'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const category = categories.find(cat => cat.id === params.slug)
+  const resolvedParams = await params
+  const category = categories.find(cat => cat.id === resolvedParams.slug)
   
   if (!category) {
     return {
@@ -30,8 +31,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function Category({ params }: PageProps) {
-  const category = categories.find(cat => cat.id === params.slug)
+export default async function Category({ params }: PageProps) {
+  const resolvedParams = await params
+  const category = categories.find(cat => cat.id === resolvedParams.slug)
   
   if (!category) {
     notFound()

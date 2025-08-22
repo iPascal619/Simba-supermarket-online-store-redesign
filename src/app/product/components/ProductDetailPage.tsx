@@ -16,7 +16,7 @@ interface ProductDetailPageProps {
     name: string
     description: string
     price: number
-    originalPrice?: number
+    originalPrice?: number | null
     category: string
     subcategory: string
     brand: string
@@ -32,7 +32,7 @@ interface ProductDetailPageProps {
       carbs: number
       protein: number
       fiber: number
-    }
+    } | null
     features: string[]
   }
 }

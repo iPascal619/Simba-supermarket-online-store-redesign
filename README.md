@@ -2,7 +2,7 @@
 
 > **A complete redesign of the Simba Supermarket online shopping platform** - Built with modern web technologies to deliver a world-class grocery shopping experience in Kigali, Rwanda.
 
-<!-- Latest deployment: TypeScript compatibility fixes for Next.js 15 -->
+<!-- Deployment: Force fresh build with latest fixes -->
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.0-000000?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Eye, EyeOff, Mail, Lock, User, Phone, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react'
 
@@ -126,8 +127,14 @@ export default function SignUpPage() {
         <div className="text-center mb-8">
           <Link href="/" className="inline-block mb-6">
             <div className="flex items-center justify-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+              <div className="relative w-20 h-16">
+                <Image
+                  src="/simba logo.png"
+                  alt="Simba Supermarket Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
             </div>
           </Link>

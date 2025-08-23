@@ -157,7 +157,7 @@ export default function AddressSection({ user }: AddressSectionProps) {
             {editingAddress ? 'Edit Address' : 'Add New Address'}
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             {/* Address Type */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -328,7 +328,7 @@ export default function AddressSection({ user }: AddressSectionProps) {
       )}
 
       {/* Address List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
         {addresses.map((address) => (
           <div key={address.id} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-start justify-between mb-4">

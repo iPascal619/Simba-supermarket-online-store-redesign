@@ -98,10 +98,10 @@ export default function ProfileSection({ user }: ProfileSectionProps) {
 
       {/* Profile Form */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-        <div className="p-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-6">Personal Information</h2>
+        <div className="p-4 lg:p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4 lg:mb-6">Personal Information</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             {/* First Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">

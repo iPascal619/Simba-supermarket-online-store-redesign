@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSession, signOut } from 'next-auth/react'
 import { useWishlist } from '@/contexts/WishlistContext'
 import { useCart } from '@/contexts/CartContext'
@@ -52,12 +53,14 @@ export default function Header() {
           <div className="flex items-center justify-between py-4 border-b border-gray-100">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Simba</h1>
-                <p className="text-sm text-gray-500">Supermarket</p>
+              <div className="relative w-24 h-16">
+                <Image
+                  src="/simba logo.png"
+                  alt="Simba Supermarket Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
             </Link>
 
